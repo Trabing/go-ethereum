@@ -1,0 +1,35 @@
+Searching 2786 files for "sendRawTransaction"
+
+/home/kenso/go-ethereum/ethclient/ethclient.go:
+  504       return err
+  505   }
+  506:  return ec.c.CallContext(ctx, nil, "eth_sendRawTransaction", common.ToHex(data))
+  507  }
+  508  
+
+/home/kenso/go-ethereum/internal/ethapi/api.go:
+ 1304  }
+ 1305  
+ 1306: // SendRawTransaction will add the signed transaction to the transaction pool.
+ 1307  // The sender is responsible for signing the transaction and using the correct nonce.
+ 1308: func (s *PublicTransactionPoolAPI) SendRawTransaction(ctx context.Context, encodedTx hexutil.Bytes) (common.Hash, error) {
+ 1309   tx := new(types.Transaction)
+ 1310   if err := rlp.DecodeBytes(encodedTx, tx); err != nil {
+
+/home/kenso/go-ethereum/internal/jsre/deps/web3.js:
+ 5359      });
+ 5360  
+ 5361:     var sendRawTransaction = new Method({
+ 5362:         name: 'sendRawTransaction',
+ 5363:         call: 'eth_sendRawTransaction',
+ 5364          params: 1,
+ 5365          inputFormatter: [null]
+ ....
+ 5447          call,
+ 5448          estimateGas,
+ 5449:         sendRawTransaction,
+ 5450          signTransaction,
+ 5451          sendTransaction,
+
+7 matches across 3 files
+
