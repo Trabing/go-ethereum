@@ -24,7 +24,7 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	// "github.com/ethereum/go-ethereum/metrics"
 )
 
 var (
@@ -36,23 +36,23 @@ var (
 )
 
 var (
-	cacheMissCounter   = metrics.NewRegisteredCounter("trie/cachemiss", nil)
-	cacheUnloadCounter = metrics.NewRegisteredCounter("trie/cacheunload", nil)
+// cacheMissCounter   = metrics.NewRegisteredCounter("trie/cachemiss", nil)
+// cacheUnloadCounter = metrics.NewRegisteredCounter("trie/cacheunload", nil)
 )
 
-// CacheMisses retrieves a global counter measuring the number of cache misses
-// the trie had since process startup. This isn't useful for anything apart from
-// trie debugging purposes.
-func CacheMisses() int64 {
-	return cacheMissCounter.Count()
-}
+// // CacheMisses retrieves a global counter measuring the number of cache misses
+// // the trie had since process startup. This isn't useful for anything apart from
+// // trie debugging purposes.
+// func CacheMisses() int64 {
+// 	return cacheMissCounter.Count()
+// }
 
-// CacheUnloads retrieves a global counter measuring the number of cache unloads
-// the trie did since process startup. This isn't useful for anything apart from
-// trie debugging purposes.
-func CacheUnloads() int64 {
-	return cacheUnloadCounter.Count()
-}
+// // CacheUnloads retrieves a global counter measuring the number of cache unloads
+// // the trie did since process startup. This isn't useful for anything apart from
+// // trie debugging purposes.
+// func CacheUnloads() int64 {
+// 	return cacheUnloadCounter.Count()
+// }
 
 // LeafCallback is a callback type invoked when a trie operation reaches a leaf
 // node. It's used by state sync and commit to allow handling external references
@@ -428,7 +428,7 @@ func (t *Trie) resolve(n node, prefix []byte) (node, error) {
 }
 
 func (t *Trie) resolveHash(n hashNode, prefix []byte) (node, error) {
-	cacheMissCounter.Inc(1)
+	// cacheMissCounter.Inc(1)
 
 	hash := common.BytesToHash(n)
 	if node := t.db.node(hash, t.cachegen); node != nil {
