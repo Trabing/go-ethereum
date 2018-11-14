@@ -1,0 +1,62 @@
+Searching 2789 files for "tx := types.NewTransaction" (whole word)
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/cmd/faucet/faucet.go:
+  473  			amount = new(big.Int).Div(amount, new(big.Int).Exp(big.NewInt(2), big.NewInt(int64(msg.Tier)), nil))
+  474  
+  475: 			tx := types.NewTransaction(f.nonce+uint64(len(f.reqs)), address, amount, 21000, f.price, nil)
+  476  			signed, err := f.keystore.SignTx(f.account, tx, f.config.ChainID)
+  477  			if err != nil {
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/core/bench_test.go:
+  120  			}
+  121  			to := (from + 1) % naccounts
+  122: 			tx := types.NewTransaction(
+  123  				gen.TxNonce(ringAddrs[from]),
+  124  				ringAddrs[to],
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/eth/helper_test.go:
+  131  // newTestTransaction create a new dummy transaction.
+  132  func newTestTransaction(from *ecdsa.PrivateKey, nonce uint64, datasize int) *types.Transaction {
+  133: 	tx := types.NewTransaction(nonce, common.Address{}, big.NewInt(0), 100000, big.NewInt(0), make([]byte, datasize))
+  134  	tx, _ = types.SignTx(tx, types.HomesteadSigner{}, from)
+  135  	return tx
+
+3 matches across 3 files
+
+
+Searching 2790 files for "submitTransaction" (whole word)
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/internal/ethapi/api.go:
+  379  		return common.Hash{}, err
+  380  	}
+  381: 	return submitTransaction(ctx, s.b, signed)
+  382  }
+  383  
+  ...
+ 1248  }
+ 1249  
+ 1250: // submitTransaction is a helper function that submits tx to txPool and logs a message.
+ 1251: func submitTransaction(ctx context.Context, b Backend, tx *types.Transaction) (common.Hash, error) {
+ 1252  	if err := b.SendTx(ctx, tx); err != nil {
+ 1253  		return common.Hash{}, err
+ ....
+ 1301  		return common.Hash{}, err
+ 1302  	}
+ 1303: 	return submitTransaction(ctx, s.b, signed)
+ 1304  }
+ 1305  
+ ....
+ 1311  		return common.Hash{}, err
+ 1312  	}
+ 1313: 	return submitTransaction(ctx, s.b, tx)
+ 1314  }
+ 1315  
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/internal/web3ext/web3ext.go:
+  464  		}),
+  465  		new web3._extend.Method({
+  466: 			name: 'submitTransaction',
+  467  			call: 'eth_submitTransaction',
+  468  			params: 1,
+
+6 matches across 2 files

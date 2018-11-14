@@ -1,0 +1,24 @@
+Searching 2789 files for "tx := types.NewTransaction" (whole word)
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/cmd/faucet/faucet.go:
+  473  			amount = new(big.Int).Div(amount, new(big.Int).Exp(big.NewInt(2), big.NewInt(int64(msg.Tier)), nil))
+  474  
+  475: 			tx := types.NewTransaction(f.nonce+uint64(len(f.reqs)), address, amount, 21000, f.price, nil)
+  476  			signed, err := f.keystore.SignTx(f.account, tx, f.config.ChainID)
+  477  			if err != nil {
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/core/bench_test.go:
+  120  			}
+  121  			to := (from + 1) % naccounts
+  122: 			tx := types.NewTransaction(
+  123  				gen.TxNonce(ringAddrs[from]),
+  124  				ringAddrs[to],
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/eth/helper_test.go:
+  131  // newTestTransaction create a new dummy transaction.
+  132  func newTestTransaction(from *ecdsa.PrivateKey, nonce uint64, datasize int) *types.Transaction {
+  133: 	tx := types.NewTransaction(nonce, common.Address{}, big.NewInt(0), 100000, big.NewInt(0), make([]byte, datasize))
+  134  	tx, _ = types.SignTx(tx, types.HomesteadSigner{}, from)
+  135  	return tx
+
+3 matches across 3 files

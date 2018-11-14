@@ -1,0 +1,125 @@
+Searching 2787 files for "PublicTransactionPoolAPI" (whole word)
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/internal/ethapi/api.go:
+ 1012  }
+ 1013  
+ 1014: // PublicTransactionPoolAPI exposes methods for the RPC interface
+ 1015: type PublicTransactionPoolAPI struct {
+ 1016  	b         Backend
+ 1017  	nonceLock *AddrLocker
+ ....
+ 1019  
+ 1020  // NewPublicTransactionPoolAPI creates a new RPC service with methods specific for the transaction pool.
+ 1021: func NewPublicTransactionPoolAPI(b Backend, nonceLock *AddrLocker) *PublicTransactionPoolAPI {
+ 1022: 	return &PublicTransactionPoolAPI{b, nonceLock}
+ 1023  }
+ 1024  
+ 1025  // GetBlockTransactionCountByNumber returns the number of transactions in the block with the given block number.
+ 1026: func (s *PublicTransactionPoolAPI) GetBlockTransactionCountByNumber(ctx context.Context, blockNr rpc.BlockNumber) *hexutil.Uint {
+ 1027  	if block, _ := s.b.BlockByNumber(ctx, blockNr); block != nil {
+ 1028  		n := hexutil.Uint(len(block.Transactions()))
+ ....
+ 1033  
+ 1034  // GetBlockTransactionCountByHash returns the number of transactions in the block with the given hash.
+ 1035: func (s *PublicTransactionPoolAPI) GetBlockTransactionCountByHash(ctx context.Context, blockHash common.Hash) *hexutil.Uint {
+ 1036  	if block, _ := s.b.GetBlock(ctx, blockHash); block != nil {
+ 1037  		n := hexutil.Uint(len(block.Transactions()))
+ ....
+ 1042  
+ 1043  // GetTransactionByBlockNumberAndIndex returns the transaction for the given block number and index.
+ 1044: func (s *PublicTransactionPoolAPI) GetTransactionByBlockNumberAndIndex(ctx context.Context, blockNr rpc.BlockNumber, index hexutil.Uint) *RPCTransaction {
+ 1045  	if block, _ := s.b.BlockByNumber(ctx, blockNr); block != nil {
+ 1046  		return newRPCTransactionFromBlockIndex(block, uint64(index))
+ ....
+ 1050  
+ 1051  // GetTransactionByBlockHashAndIndex returns the transaction for the given block hash and index.
+ 1052: func (s *PublicTransactionPoolAPI) GetTransactionByBlockHashAndIndex(ctx context.Context, blockHash common.Hash, index hexutil.Uint) *RPCTransaction {
+ 1053  	if block, _ := s.b.GetBlock(ctx, blockHash); block != nil {
+ 1054  		return newRPCTransactionFromBlockIndex(block, uint64(index))
+ ....
+ 1058  
+ 1059  // GetRawTransactionByBlockNumberAndIndex returns the bytes of the transaction for the given block number and index.
+ 1060: func (s *PublicTransactionPoolAPI) GetRawTransactionByBlockNumberAndIndex(ctx context.Context, blockNr rpc.BlockNumber, index hexutil.Uint) hexutil.Bytes {
+ 1061  	if block, _ := s.b.BlockByNumber(ctx, blockNr); block != nil {
+ 1062  		return newRPCRawTransactionFromBlockIndex(block, uint64(index))
+ ....
+ 1066  
+ 1067  // GetRawTransactionByBlockHashAndIndex returns the bytes of the transaction for the given block hash and index.
+ 1068: func (s *PublicTransactionPoolAPI) GetRawTransactionByBlockHashAndIndex(ctx context.Context, blockHash common.Hash, index hexutil.Uint) hexutil.Bytes {
+ 1069  	if block, _ := s.b.GetBlock(ctx, blockHash); block != nil {
+ 1070  		return newRPCRawTransactionFromBlockIndex(block, uint64(index))
+ ....
+ 1074  
+ 1075  // GetTransactionCount returns the number of transactions the given address has sent for the given block number
+ 1076: func (s *PublicTransactionPoolAPI) GetTransactionCount(ctx context.Context, address common.Address, blockNr rpc.BlockNumber) (*hexutil.Uint64, error) {
+ 1077  	state, _, err := s.b.StateAndHeaderByNumber(ctx, blockNr)
+ 1078  	if state == nil || err != nil {
+ ....
+ 1084  
+ 1085  // GetTransactionByHash returns the transaction for the given hash
+ 1086: func (s *PublicTransactionPoolAPI) GetTransactionByHash(ctx context.Context, hash common.Hash) *RPCTransaction {
+ 1087  	// Try to return an already finalized transaction
+ 1088  	if tx, blockHash, blockNumber, index := rawdb.ReadTransaction(s.b.ChainDb(), hash); tx != nil {
+ ....
+ 1098  
+ 1099  // GetRawTransactionByHash returns the bytes of the transaction for the given hash.
+ 1100: func (s *PublicTransactionPoolAPI) GetRawTransactionByHash(ctx context.Context, hash common.Hash) (hexutil.Bytes, error) {
+ 1101  	var tx *types.Transaction
+ 1102  
+ ....
+ 1113  
+ 1114  // GetTransactionReceipt returns the transaction receipt for the given transaction hash.
+ 1115: func (s *PublicTransactionPoolAPI) GetTransactionReceipt(ctx context.Context, hash common.Hash) (map[string]interface{}, error) {
+ 1116  	tx, blockHash, blockNumber, index := rawdb.ReadTransaction(s.b.ChainDb(), hash)
+ 1117  	if tx == nil {
+ ....
+ 1164  
+ 1165  // sign is a helper function that signs a transaction with the private key of the given address.
+ 1166: func (s *PublicTransactionPoolAPI) sign(addr common.Address, tx *types.Transaction) (*types.Transaction, error) {
+ 1167  	// Look up the wallet containing the requested signer
+ 1168  	account := accounts.Account{Address: addr}
+ ....
+ 1269  // SendTransaction creates a transaction for the given argument, sign it and submit it to the
+ 1270  // transaction pool.
+ 1271: func (s *PublicTransactionPoolAPI) SendTransaction(ctx context.Context, args SendTxArgs) (common.Hash, error) {
+ 1272  
+ 1273  	// Look up the wallet containing the requested signer
+ ....
+ 1306  // SendRawTransaction will add the signed transaction to the transaction pool.
+ 1307  // The sender is responsible for signing the transaction and using the correct nonce.
+ 1308: func (s *PublicTransactionPoolAPI) SendRawTransaction(ctx context.Context, encodedTx hexutil.Bytes) (common.Hash, error) {
+ 1309  	tx := new(types.Transaction)
+ 1310  	if err := rlp.DecodeBytes(encodedTx, tx); err != nil {
+ ....
+ 1323  //
+ 1324  // https://github.com/ethereum/wiki/wiki/JSON-RPC#eth_sign
+ 1325: func (s *PublicTransactionPoolAPI) Sign(addr common.Address, data hexutil.Bytes) (hexutil.Bytes, error) {
+ 1326  	// Look up the wallet containing the requested signer
+ 1327  	account := accounts.Account{Address: addr}
+ ....
+ 1348  // The node needs to have the private key of the account corresponding with
+ 1349  // the given from address and it needs to be unlocked.
+ 1350: func (s *PublicTransactionPoolAPI) SignTransaction(ctx context.Context, args SendTxArgs) (*SignTransactionResult, error) {
+ 1351  	if args.Gas == nil {
+ 1352  		return nil, fmt.Errorf("gas not specified")
+ ....
+ 1374  // PendingTransactions returns the transactions that are in the transaction pool
+ 1375  // and have a from address that is one of the accounts this node manages.
+ 1376: func (s *PublicTransactionPoolAPI) PendingTransactions() ([]*RPCTransaction, error) {
+ 1377  	pending, err := s.b.GetPoolTransactions()
+ 1378  	if err != nil {
+ ....
+ 1401  // Resend accepts an existing transaction and a new gas price and limit. It will remove
+ 1402  // the given transaction from the pool and reinsert it with the new gas price and limit.
+ 1403: func (s *PublicTransactionPoolAPI) Resend(ctx context.Context, sendArgs SendTxArgs, gasPrice *hexutil.Big, gasLimit *hexutil.Uint64) (common.Hash, error) {
+ 1404  	if sendArgs.Nonce == nil {
+ 1405  		return common.Hash{}, fmt.Errorf("missing transaction nonce in transaction spec")
+
+/home/kenso/work/src/github.com/ethereum/go-ethereum/notes/results-sendRawTransaction.subl:
+   13   1306: // SendRawTransaction will add the signed transaction to the transaction pool.
+   14   1307  // The sender is responsible for signing the transaction and using the correct nonce.
+   15:  1308: func (s *PublicTransactionPoolAPI) SendRawTransaction(ctx context.Context, encodedTx hexutil.Bytes) (common.Hash, error) {
+   16   1309   tx := new(types.Transaction)
+   17   1310   if err := rlp.DecodeBytes(encodedTx, tx); err != nil {
+
+22 matches across 2 files
