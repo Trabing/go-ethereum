@@ -683,8 +683,8 @@ func (s *Service) reportStats(conn *websocket.Conn) error {
 		gasprice int
 	)
 	if s.eth != nil {
-		mining = s.eth.Miner().Mining()
-		hashrate = int(s.eth.Miner().HashRate())
+		// mining = s.eth.Miner().Mining()
+		// hashrate = int(s.eth.Miner().HashRate())
 
 		sync := s.eth.Downloader().Progress()
 		syncing = s.eth.BlockChain().CurrentHeader().Number.Uint64() >= sync.HighestBlock

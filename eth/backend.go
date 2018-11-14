@@ -23,7 +23,6 @@ import (
 	"math/big"
 	"runtime"
 	"sync"
-	"sync/atomic"
 
 	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/common"
@@ -43,7 +42,8 @@ import (
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/internal/ethapi"
 	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/miner"
+
+	// "github.com/ethereum/go-ethereum/miner"
 	"github.com/ethereum/go-ethereum/node"
 	"github.com/ethereum/go-ethereum/p2p"
 	"github.com/ethereum/go-ethereum/params"
@@ -84,7 +84,7 @@ type Ethereum struct {
 
 	APIBackend *EthAPIBackend
 
-	miner     *miner.Miner
+	// miner     *miner.Miner
 	gasPrice  *big.Int
 	etherbase common.Address
 
@@ -177,8 +177,8 @@ func New(ctx *node.ServiceContext, config *Config) (*Ethereum, error) {
 		return nil, err
 	}
 
-	eth.miner = miner.New(eth, eth.chainConfig, eth.EventMux(), eth.engine, config.MinerRecommit, config.MinerGasFloor, config.MinerGasCeil, eth.isLocalBlock)
-	eth.miner.SetExtra(makeExtraData(config.MinerExtraData))
+	// eth.miner = miner.New(eth, eth.chainConfig, eth.EventMux(), eth.engine, config.MinerRecommit, config.MinerGasFloor, config.MinerGasCeil, eth.isLocalBlock)
+	// eth.miner.SetExtra(makeExtraData(config.MinerExtraData))
 
 	eth.APIBackend = &EthAPIBackend{eth, nil}
 	gpoParams := config.GPO
@@ -276,11 +276,11 @@ func (s *Ethereum) APIs() []rpc.API {
 			Service:   downloader.NewPublicDownloaderAPI(s.protocolManager.downloader, s.eventMux),
 			Public:    true,
 		}, {
-			Namespace: "miner",
-			Version:   "1.0",
-			Service:   NewPrivateMinerAPI(s),
-			Public:    false,
-		}, {
+			// 	Namespace: "miner",
+			// 	Version:   "1.0",
+			// 	Service:   NewPrivateMinerAPI(s),
+			// 	Public:    false,
+			// }, {
 			Namespace: "eth",
 			Version:   "1.0",
 			Service:   filters.NewPublicFilterAPI(s.APIBackend, false),
@@ -388,77 +388,78 @@ func (s *Ethereum) shouldPreserve(block *types.Block) bool {
 	return s.isLocalBlock(block)
 }
 
-// SetEtherbase sets the mining reward address.
-func (s *Ethereum) SetEtherbase(etherbase common.Address) {
-	s.lock.Lock()
-	s.etherbase = etherbase
-	s.lock.Unlock()
+// // SetEtherbase sets the mining reward address.
+// func (s *Ethereum) SetEtherbase(etherbase common.Address) {
+// 	s.lock.Lock()
+// 	s.etherbase = etherbase
+// 	s.lock.Unlock()
 
-	s.miner.SetEtherbase(etherbase)
-}
+// 	s.miner.SetEtherbase(etherbase)
+// }
 
-// StartMining starts the miner with the given number of CPU threads. If mining
-// is already running, this method adjust the number of threads allowed to use
-// and updates the minimum price required by the transaction pool.
-func (s *Ethereum) StartMining(threads int) error {
-	// Update the thread count within the consensus engine
-	type threaded interface {
-		SetThreads(threads int)
-	}
-	if th, ok := s.engine.(threaded); ok {
-		log.Info("Updated mining threads", "threads", threads)
-		if threads == 0 {
-			threads = -1 // Disable the miner from within
-		}
-		th.SetThreads(threads)
-	}
-	// If the miner was not running, initialize it
-	if !s.IsMining() {
-		// Propagate the initial price point to the transaction pool
-		s.lock.RLock()
-		price := s.gasPrice
-		s.lock.RUnlock()
-		s.txPool.SetGasPrice(price)
+// // StartMining starts the miner with the given number of CPU threads. If mining
+// // is already running, this method adjust the number of threads allowed to use
+// // and updates the minimum price required by the transaction pool.
+// func (s *Ethereum) StartMining(threads int) error {
+// 	// Update the thread count within the consensus engine
+// 	type threaded interface {
+// 		SetThreads(threads int)
+// 	}
+// 	if th, ok := s.engine.(threaded); ok {
+// 		log.Info("Updated mining threads", "threads", threads)
+// 		if threads == 0 {
+// 			threads = -1 // Disable the miner from within
+// 		}
+// 		th.SetThreads(threads)
+// 	}
+// 	// If the miner was not running, initialize it
+// 	if !s.IsMining() {
+// 		// Propagate the initial price point to the transaction pool
+// 		s.lock.RLock()
+// 		price := s.gasPrice
+// 		s.lock.RUnlock()
+// 		s.txPool.SetGasPrice(price)
 
-		// Configure the local mining address
-		eb, err := s.Etherbase()
-		if err != nil {
-			log.Error("Cannot start mining without etherbase", "err", err)
-			return fmt.Errorf("etherbase missing: %v", err)
-		}
-		if clique, ok := s.engine.(*clique.Clique); ok {
-			wallet, err := s.accountManager.Find(accounts.Account{Address: eb})
-			if wallet == nil || err != nil {
-				log.Error("Etherbase account unavailable locally", "err", err)
-				return fmt.Errorf("signer missing: %v", err)
-			}
-			clique.Authorize(eb, wallet.SignHash)
-		}
-		// If mining is started, we can disable the transaction rejection mechanism
-		// introduced to speed sync times.
-		atomic.StoreUint32(&s.protocolManager.acceptTxs, 1)
+// 		// Configure the local mining address
+// 		eb, err := s.Etherbase()
+// 		if err != nil {
+// 			log.Error("Cannot start mining without etherbase", "err", err)
+// 			return fmt.Errorf("etherbase missing: %v", err)
+// 		}
+// 		if clique, ok := s.engine.(*clique.Clique); ok {
+// 			wallet, err := s.accountManager.Find(accounts.Account{Address: eb})
+// 			if wallet == nil || err != nil {
+// 				log.Error("Etherbase account unavailable locally", "err", err)
+// 				return fmt.Errorf("signer missing: %v", err)
+// 			}
+// 			clique.Authorize(eb, wallet.SignHash)
+// 		}
+// 		// If mining is started, we can disable the transaction rejection mechanism
+// 		// introduced to speed sync times.
+// 		atomic.StoreUint32(&s.protocolManager.acceptTxs, 1)
 
-		go s.miner.Start(eb)
-	}
-	return nil
-}
+// 		// go s.miner.Start(eb)
+// 	}
+// 	return nil
+// }
 
-// StopMining terminates the miner, both at the consensus engine level as well as
-// at the block creation level.
-func (s *Ethereum) StopMining() {
-	// Update the thread count within the consensus engine
-	type threaded interface {
-		SetThreads(threads int)
-	}
-	if th, ok := s.engine.(threaded); ok {
-		th.SetThreads(-1)
-	}
-	// Stop the block creating itself
-	s.miner.Stop()
-}
+// // StopMining terminates the miner, both at the consensus engine level as well as
+// // at the block creation level.
+// func (s *Ethereum) StopMining() {
+// 	// Update the thread count within the consensus engine
+// 	type threaded interface {
+// 		SetThreads(threads int)
+// 	}
+// 	if th, ok := s.engine.(threaded); ok {
+// 		th.SetThreads(-1)
+// 	}
+// 	// Stop the block creating itself
+// 	s.miner.Stop()
+// }
 
-func (s *Ethereum) IsMining() bool      { return s.miner.Mining() }
-func (s *Ethereum) Miner() *miner.Miner { return s.miner }
+// func (s *Ethereum) IsMining() bool { return s.miner.Mining() }
+
+// func (s *Ethereum) Miner() *miner.Miner { return s.miner }
 
 func (s *Ethereum) AccountManager() *accounts.Manager  { return s.accountManager }
 func (s *Ethereum) BlockChain() *core.BlockChain       { return s.blockchain }
@@ -516,7 +517,7 @@ func (s *Ethereum) Stop() error {
 		s.lesServer.Stop()
 	}
 	s.txPool.Stop()
-	s.miner.Stop()
+	// s.miner.Stop()
 	s.eventMux.Stop()
 
 	s.chainDb.Close()
