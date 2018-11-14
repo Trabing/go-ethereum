@@ -1143,28 +1143,6 @@
 │       ├── aes_gcm_storage.go
 │       ├── aes_gcm_storage_test.go
 │       └── storage.go
-├── tests
-│   ├── block_test.go
-│   ├── block_test_util.go
-│   ├── difficulty_test.go
-│   ├── difficulty_test_util.go
-│   ├── gen_btheader.go
-│   ├── gen_difficultytest.go
-│   ├── gen_stenv.go
-│   ├── gen_sttransaction.go
-│   ├── gen_tttransaction.go
-│   ├── gen_vmexec.go
-│   ├── init.go
-│   ├── init_test.go
-│   ├── rlp_test.go
-│   ├── rlp_test_util.go
-│   ├── state_test.go
-│   ├── state_test_util.go
-│   ├── testdata
-│   ├── transaction_test.go
-│   ├── transaction_test_util.go
-│   ├── vm_test.go
-│   └── vm_test_util.go
 └── trie
     ├── database.go
     ├── encoding.go
@@ -1184,4 +1162,4 @@
     ├── trie.go
     └── trie_test.go
 
-155 directories, 1029 files
+153 directories, 1009 files
