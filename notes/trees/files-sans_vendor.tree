@@ -997,28 +997,6 @@
 │   ├── service.go
 │   ├── service_test.go
 │   └── utils_test.go
-├── notes
-│   ├── analysis
-│   │   └── logger.py
-│   ├── logs
-│   │   ├── github-dates.log
-│   │   ├── ordered
-│   │   │   ├── github-authors.log
-│   │   │   ├── github-commit.log
-│   │   │   ├── github-commits.log
-│   │   │   └── github-dates.log
-│   │   └── unordered
-│   │       └── github-authors.txt
-│   ├── subls
-│   │   ├── results-PublicTransactionPoolAPI.subl
-│   │   ├── results-sendRawTransaction.subl
-│   │   ├── results-submitTransaction.subl
-│   │   └── results-tx_types.NewTransaction .subl
-│   └── trees
-│       ├── directories.tree
-│       ├── files-sans_vendor.tree
-│       ├── filesystem.tree
-│       └── packages.tree
 ├── p2p
 │   ├── dial.go
 │   ├── dial_test.go
@@ -1495,69 +1473,23 @@
 │   ├── transaction_test_util.go
 │   ├── vm_test.go
 │   └── vm_test_util.go
-├── trie
-│   ├── database.go
-│   ├── encoding.go
-│   ├── encoding_test.go
-│   ├── errors.go
-│   ├── hasher.go
-│   ├── iterator.go
-│   ├── iterator_test.go
-│   ├── node.go
-│   ├── node_test.go
-│   ├── proof.go
-│   ├── proof_test.go
-│   ├── secure_trie.go
-│   ├── secure_trie_test.go
-│   ├── sync.go
-│   ├── sync_test.go
-│   ├── trie.go
-│   └── trie_test.go
-└── whisper
-    ├── mailserver
-    │   ├── mailserver.go
-    │   └── server_test.go
-    ├── shhclient
-    │   └── client.go
-    ├── whisperv5
-    │   ├── api.go
-    │   ├── benchmarks_test.go
-    │   ├── config.go
-    │   ├── doc.go
-    │   ├── envelope.go
-    │   ├── filter.go
-    │   ├── filter_test.go
-    │   ├── gen_criteria_json.go
-    │   ├── gen_message_json.go
-    │   ├── gen_newmessage_json.go
-    │   ├── message.go
-    │   ├── message_test.go
-    │   ├── peer.go
-    │   ├── peer_test.go
-    │   ├── topic.go
-    │   ├── topic_test.go
-    │   ├── whisper.go
-    │   └── whisper_test.go
-    └── whisperv6
-        ├── api.go
-        ├── api_test.go
-        ├── benchmarks_test.go
-        ├── config.go
-        ├── doc.go
-        ├── envelope.go
-        ├── envelope_test.go
-        ├── filter.go
-        ├── filter_test.go
-        ├── gen_criteria_json.go
-        ├── gen_message_json.go
-        ├── gen_newmessage_json.go
-        ├── message.go
-        ├── message_test.go
-        ├── peer.go
-        ├── peer_test.go
-        ├── topic.go
-        ├── topic_test.go
-        ├── whisper.go
-        └── whisper_test.go
+└── trie
+    ├── database.go
+    ├── encoding.go
+    ├── encoding_test.go
+    ├── errors.go
+    ├── hasher.go
+    ├── iterator.go
+    ├── iterator_test.go
+    ├── node.go
+    ├── node_test.go
+    ├── proof.go
+    ├── proof_test.go
+    ├── secure_trie.go
+    ├── secure_trie_test.go
+    ├── sync.go
+    ├── sync_test.go
+    ├── trie.go
+    └── trie_test.go
 
-218 directories, 1342 files
+206 directories, 1286 files
