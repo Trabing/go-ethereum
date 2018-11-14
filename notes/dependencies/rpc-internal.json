@@ -1,0 +1,4068 @@
+{
+  "name": "github.com/ethereum/go-ethereum/rpc",
+  "internal": false,
+  "resolved": true,
+  "deps": [
+    {
+      "name": "bufio",
+      "internal": true,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "internal/bytealg",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "internal/cpu",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unsafe",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "internal/race",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "unsafe",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        }
+                      ]
+                    },
+                    {
+                      "name": "runtime",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "internal/bytealg",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "internal/cpu",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "runtime/internal/atomic",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": [
+                            {
+                              "name": "unsafe",
+                              "internal": true,
+                              "resolved": true,
+                              "deps": null
+                            }
+                          ]
+                        },
+                        {
+                          "name": "runtime/internal/sys",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "unsafe",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        }
+                      ]
+                    },
+                    {
+                      "name": "sync/atomic",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "unsafe",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        }
+                      ]
+                    },
+                    {
+                      "name": "unsafe",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "sync/atomic",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "unicode",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "unicode/utf8",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "unicode/utf8",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "bytes",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "container/list",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "context",
+      "internal": true,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "math",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "internal/cpu",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unsafe",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "os",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "internal/poll",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "io",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "runtime",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "sync",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "sync/atomic",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "syscall",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "internal/race",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "runtime",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "sync",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "unsafe",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        }
+                      ]
+                    },
+                    {
+                      "name": "time",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "errors",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "runtime",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "sync",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "syscall",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        }
+                      ]
+                    },
+                    {
+                      "name": "unsafe",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "internal/syscall/unix",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "sync/atomic",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "syscall",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "unsafe",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "internal/testlog",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "sync/atomic",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "runtime",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync/atomic",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "syscall",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unsafe",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "reflect",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "math",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "runtime",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strconv",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "math",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "math/bits",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "unicode/utf8",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unicode",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unicode/utf8",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unsafe",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "sync",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "unicode/utf8",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "reflect",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "time",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "crypto/rand",
+      "internal": true,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bufio",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/aes",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "crypto/cipher",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "crypto/internal/subtle",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "unsafe",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "crypto/subtle",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "runtime",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unsafe",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "crypto/internal/subtle",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/subtle",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "internal/cpu",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/cipher",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "internal/syscall/unix",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "math/big",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "bytes",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "encoding/binary",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "reflect",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "fmt",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "internal/cpu",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "math",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "math/bits",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "math/rand",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "math",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strings",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "internal/bytealg",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unicode",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unicode/utf8",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unsafe",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "sync",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "os",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "runtime",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "syscall",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "time",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "crypto/tls",
+      "internal": true,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "container/list",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "hash",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/aes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/cipher",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/des",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "crypto/cipher",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/internal/subtle",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "encoding/binary",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/ecdsa",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "crypto",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/aes",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/cipher",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/elliptic",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math/big",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "crypto/internal/randutil",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "crypto/sha512",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "crypto",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "hash",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "internal/cpu",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "encoding/asn1",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "fmt",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math/big",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "reflect",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strconv",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strings",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unicode/utf8",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "math/big",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/elliptic",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/hmac",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "crypto/subtle",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "hash",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/md5",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "crypto",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "hash",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "runtime",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "unsafe",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/rand",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/rc4",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "crypto/internal/subtle",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/rsa",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "bytes",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/internal/randutil",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/rand",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/subtle",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "hash",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "math",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "math/big",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/sha1",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "crypto",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "hash",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "internal/cpu",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/sha256",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "crypto",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "hash",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "internal/cpu",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "crypto/sha512",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/subtle",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/x509",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "bytes",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/aes",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/cipher",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/des",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/dsa",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "crypto/internal/randutil",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math/big",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "crypto/ecdsa",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/elliptic",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/md5",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/rsa",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/sha1",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/sha256",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/sha512",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "crypto/x509/pkix",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "encoding/asn1",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "encoding/hex",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "bytes",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "fmt",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "io",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "fmt",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math/big",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "encoding/asn1",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "encoding/hex",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "encoding/pem",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "bytes",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "encoding/base64",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "encoding/binary",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "io",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "strconv",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sort",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "reflect",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "strings",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "fmt",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "io/ioutil",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "bytes",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "os",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "path/filepath",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "os",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "runtime",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "sort",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "strings",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "unicode/utf8",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "sort",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strconv",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strings",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "math/big",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "net",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "context",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "internal/nettrace",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "internal/poll",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "internal/singleflight",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "sync",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math/rand",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "os",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "runtime",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sort",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync/atomic",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "syscall",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unsafe",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "vendor/golang_org/x/net/dns/dnsmessage",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "C",
+                  "internal": false,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "net/url",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "fmt",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sort",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strconv",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strings",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "os",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "reflect",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "runtime",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strings",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "sync",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "time",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "unicode/utf8",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "vendor/golang_org/x/crypto/cryptobyte",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "encoding/asn1",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "fmt",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math/big",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "reflect",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "vendor/golang_org/x/crypto/cryptobyte/asn1",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "vendor/golang_org/x/crypto/cryptobyte/asn1",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "encoding/asn1",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/pem",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "hash",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "internal/cpu",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io/ioutil",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "math/big",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strconv",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync/atomic",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "time",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "vendor/golang_org/x/crypto/chacha20poly1305",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "crypto/cipher",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "encoding/binary",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "internal/cpu",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "vendor/golang_org/x/crypto/internal/chacha20",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "crypto/cipher",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "encoding/binary",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "runtime",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "vendor/golang_org/x/crypto/poly1305",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "crypto/subtle",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "encoding/binary",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "vendor/golang_org/x/crypto/curve25519",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "encoding/base64",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "encoding/binary",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "encoding/hex",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "encoding/json",
+      "internal": true,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/base64",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "math",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "reflect",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sort",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strconv",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "unicode",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "unicode/utf16",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "unicode/utf8",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "errors",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "fmt",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "io",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "io/ioutil",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "math",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "math/rand",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "mime",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "net",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "net/http",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "net/url",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "os",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "path/filepath",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "reflect",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "runtime",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "strconv",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "strings",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "sync",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "sync/atomic",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "time",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "unicode",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "unicode/utf8",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/common/hexutil",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "encoding/hex",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/json",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "math/big",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "reflect",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strconv",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/log",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/json",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io/ioutil",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "log/syslog",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "fmt",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "log",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "fmt",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "os",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "runtime",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "net",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "os",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strings",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "sync",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "time",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "net",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "os",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "path/filepath",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "reflect",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "regexp",
+          "internal": true,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "bytes",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "regexp/syntax",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "sort",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strconv",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strings",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unicode",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unicode/utf8",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "sort",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strings",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "sync",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "unicode",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "unicode/utf8",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        },
+        {
+          "name": "runtime",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strconv",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync/atomic",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "time",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "unicode/utf8",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "github.com/ethereum/go-ethereum/vendor/github.com/go-stack/stack",
+          "internal": false,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "bytes",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "fmt",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "runtime",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strings",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/p2p/netutil",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sort",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "time",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "github.com/ethereum/go-ethereum/common/mclock",
+          "internal": false,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "sync",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "time",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "github.com/ethereum/go-ethereum/vendor/github.com/aristanetworks/goarista/monotime",
+              "internal": false,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unsafe",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/vendor/github.com/deckarep/golang-set",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/json",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "reflect",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/vendor/github.com/rs/cors",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "log",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net/http",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "os",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strconv",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "github.com/ethereum/go-ethereum/vendor/github.com/rs/xhandler",
+          "internal": false,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "net/http",
+              "internal": true,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "bufio",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "bytes",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "compress/gzip",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "bufio",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "compress/flate",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "bufio",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "fmt",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "io",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "math",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "math/bits",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "sort",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "strconv",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "sync",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        }
+                      ]
+                    },
+                    {
+                      "name": "encoding/binary",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "fmt",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "hash/crc32",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "errors",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "hash",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "internal/cpu",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "sync",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "unsafe",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        }
+                      ]
+                    },
+                    {
+                      "name": "io",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "time",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "container/list",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "context",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "crypto/rand",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "crypto/tls",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "encoding/base64",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "encoding/binary",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "errors",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "fmt",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "io",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "io/ioutil",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "log",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "math/rand",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "mime",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "bufio",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "bytes",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "encoding/base64",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "fmt",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "io",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "os",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "sort",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "strings",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "sync",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "unicode",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "unicode/utf8",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "mime/multipart",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "bufio",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "bytes",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "crypto/rand",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "fmt",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "io",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "io/ioutil",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "mime",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "mime/quotedprintable",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "bufio",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "bytes",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "fmt",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "io",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        }
+                      ]
+                    },
+                    {
+                      "name": "net/textproto",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "os",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "sort",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "strings",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "net",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "net/http/httptrace",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "context",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "crypto/tls",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "internal/nettrace",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "net",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "net/textproto",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "reflect",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "time",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "net/http/internal",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "bufio",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "bytes",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "fmt",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "io",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "net/textproto",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "net/url",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "os",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "path",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "strings",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "unicode/utf8",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "path/filepath",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "reflect",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "runtime",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sort",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strconv",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "strings",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "sync/atomic",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unicode/utf8",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "vendor/golang_org/x/net/http/httpguts",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "net",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "net/textproto",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "bufio",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "bytes",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "fmt",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "io",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "io/ioutil",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "net",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "strconv",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "strings",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "sync",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        }
+                      ]
+                    },
+                    {
+                      "name": "strings",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "unicode/utf8",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "vendor/golang_org/x/net/idna",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": [
+                        {
+                          "name": "fmt",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "math",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "strings",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "unicode/utf8",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "vendor/golang_org/x/text/secure/bidirule",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": [
+                            {
+                              "name": "errors",
+                              "internal": true,
+                              "resolved": true,
+                              "deps": null
+                            },
+                            {
+                              "name": "unicode/utf8",
+                              "internal": true,
+                              "resolved": true,
+                              "deps": null
+                            },
+                            {
+                              "name": "vendor/golang_org/x/text/transform",
+                              "internal": true,
+                              "resolved": true,
+                              "deps": [
+                                {
+                                  "name": "bytes",
+                                  "internal": true,
+                                  "resolved": true,
+                                  "deps": null
+                                },
+                                {
+                                  "name": "errors",
+                                  "internal": true,
+                                  "resolved": true,
+                                  "deps": null
+                                },
+                                {
+                                  "name": "io",
+                                  "internal": true,
+                                  "resolved": true,
+                                  "deps": null
+                                },
+                                {
+                                  "name": "unicode/utf8",
+                                  "internal": true,
+                                  "resolved": true,
+                                  "deps": null
+                                }
+                              ]
+                            },
+                            {
+                              "name": "vendor/golang_org/x/text/unicode/bidi",
+                              "internal": true,
+                              "resolved": true,
+                              "deps": [
+                                {
+                                  "name": "container/list",
+                                  "internal": true,
+                                  "resolved": true,
+                                  "deps": null
+                                },
+                                {
+                                  "name": "fmt",
+                                  "internal": true,
+                                  "resolved": true,
+                                  "deps": null
+                                },
+                                {
+                                  "name": "log",
+                                  "internal": true,
+                                  "resolved": true,
+                                  "deps": null
+                                },
+                                {
+                                  "name": "sort",
+                                  "internal": true,
+                                  "resolved": true,
+                                  "deps": null
+                                },
+                                {
+                                  "name": "unicode/utf8",
+                                  "internal": true,
+                                  "resolved": true,
+                                  "deps": null
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "name": "vendor/golang_org/x/text/unicode/bidi",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": null
+                        },
+                        {
+                          "name": "vendor/golang_org/x/text/unicode/norm",
+                          "internal": true,
+                          "resolved": true,
+                          "deps": [
+                            {
+                              "name": "fmt",
+                              "internal": true,
+                              "resolved": true,
+                              "deps": null
+                            },
+                            {
+                              "name": "io",
+                              "internal": true,
+                              "resolved": true,
+                              "deps": null
+                            },
+                            {
+                              "name": "unicode/utf8",
+                              "internal": true,
+                              "resolved": true,
+                              "deps": null
+                            },
+                            {
+                              "name": "vendor/golang_org/x/text/transform",
+                              "internal": true,
+                              "resolved": true,
+                              "deps": null
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "vendor/golang_org/x/net/http/httpproxy",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "fmt",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "net",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "net/url",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "os",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "strings",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "unicode/utf8",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "vendor/golang_org/x/net/idna",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "vendor/golang_org/x/net/http2/hpack",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": [
+                    {
+                      "name": "bytes",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "errors",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "fmt",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "io",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    },
+                    {
+                      "name": "sync",
+                      "internal": true,
+                      "resolved": true,
+                      "deps": null
+                    }
+                  ]
+                },
+                {
+                  "name": "vendor/golang_org/x/net/idna",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            },
+            {
+              "name": "time",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "github.com/ethereum/go-ethereum/vendor/golang.org/x/net/context",
+              "internal": false,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "context",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "github.com/ethereum/go-ethereum/vendor/golang.org/x/net/context",
+          "internal": false,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/vendor/golang.org/x/net/websocket",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bufio",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/rand",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/sha1",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/tls",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/base64",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/binary",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/json",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io/ioutil",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net/http",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net/url",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "time",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    }
+  ]
+}

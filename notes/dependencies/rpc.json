@@ -1,0 +1,732 @@
+{
+  "name": "github.com/ethereum/go-ethereum/rpc",
+  "internal": false,
+  "resolved": true,
+  "deps": [
+    {
+      "name": "bufio",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "bytes",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "container/list",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "context",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "crypto/rand",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "crypto/tls",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "encoding/base64",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "encoding/binary",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "encoding/hex",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "encoding/json",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "errors",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "fmt",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "io",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "io/ioutil",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "math",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "math/rand",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "mime",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "net",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "net/http",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "net/url",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "os",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "path/filepath",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "reflect",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "runtime",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "strconv",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "strings",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "sync",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "sync/atomic",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "time",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "unicode",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "unicode/utf8",
+      "internal": true,
+      "resolved": true,
+      "deps": null
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/common/hexutil",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "encoding/hex",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/json",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "math/big",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "reflect",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strconv",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/log",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/json",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io/ioutil",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "log/syslog",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "os",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "path/filepath",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "reflect",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "regexp",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "runtime",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strconv",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync/atomic",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "time",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "unicode/utf8",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "github.com/ethereum/go-ethereum/vendor/github.com/go-stack/stack",
+          "internal": false,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "bytes",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "errors",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "fmt",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "io",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "runtime",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strconv",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "strings",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/p2p/netutil",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sort",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "time",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "github.com/ethereum/go-ethereum/common/mclock",
+          "internal": false,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "sync",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "time",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "github.com/ethereum/go-ethereum/vendor/github.com/aristanetworks/goarista/monotime",
+              "internal": false,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "unsafe",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/vendor/github.com/deckarep/golang-set",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/json",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "reflect",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/vendor/github.com/rs/cors",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "log",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net/http",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "os",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strconv",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "github.com/ethereum/go-ethereum/vendor/github.com/rs/xhandler",
+          "internal": false,
+          "resolved": true,
+          "deps": [
+            {
+              "name": "net/http",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "time",
+              "internal": true,
+              "resolved": true,
+              "deps": null
+            },
+            {
+              "name": "github.com/ethereum/go-ethereum/vendor/golang.org/x/net/context",
+              "internal": false,
+              "resolved": true,
+              "deps": [
+                {
+                  "name": "context",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                },
+                {
+                  "name": "time",
+                  "internal": true,
+                  "resolved": true,
+                  "deps": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "github.com/ethereum/go-ethereum/vendor/golang.org/x/net/context",
+          "internal": false,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    },
+    {
+      "name": "github.com/ethereum/go-ethereum/vendor/golang.org/x/net/websocket",
+      "internal": false,
+      "resolved": true,
+      "deps": [
+        {
+          "name": "bufio",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "bytes",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/rand",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/sha1",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "crypto/tls",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/base64",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/binary",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "encoding/json",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "errors",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "fmt",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "io/ioutil",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net/http",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "net/url",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "strings",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "sync",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        },
+        {
+          "name": "time",
+          "internal": true,
+          "resolved": true,
+          "deps": null
+        }
+      ]
+    }
+  ]
+}
