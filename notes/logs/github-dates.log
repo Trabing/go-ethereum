@@ -1,0 +1,2 @@
+    - get rid of IsUpToDate and sleep in miner start
+    Implemented IsUpToDate to mark the node as ready to start mining
