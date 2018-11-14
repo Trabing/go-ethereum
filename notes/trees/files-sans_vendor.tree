@@ -660,7 +660,6 @@
 │   ├── serverpool.go
 │   ├── sync.go
 │   └── txrelay.go
-├── Makefile
 ├── metrics
 │   ├── counter.go
 │   ├── debug.go
@@ -838,4 +837,4 @@
     ├── sync.go
     └── trie.go
 
-136 directories, 702 files
+136 directories, 701 files
