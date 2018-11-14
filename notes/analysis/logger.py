@@ -3,10 +3,9 @@
 import csv
 
 
-with open('../logs/github-authors.log','r') as f:
-    with open('../logs/github-authors.txt','w') as g:
-        rows = csv.reader(f)
-        rows = set(tuple(a) for a in rows)
+with open('notes/logs/github-authors.log','r') as f:
+    with open('notes/logs/github-authors.txt','w') as g:
+        rows = set(tuple(a) for a in csv.reader(f))
         writer = csv.writer(g)
         for row in rows:
             writer.writerow(row)
