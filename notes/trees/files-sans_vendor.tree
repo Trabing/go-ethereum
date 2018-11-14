@@ -527,8 +527,6 @@
 │   ├── dashboard.go
 │   ├── log.go
 │   └── message.go
-├── Dockerfile
-├── Dockerfile.alltools
 ├── eth
 │   ├── api_backend.go
 │   ├── api.go
@@ -840,4 +838,4 @@
     ├── sync.go
     └── trie.go
 
-136 directories, 704 files
+136 directories, 702 files
